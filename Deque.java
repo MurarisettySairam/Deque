@@ -43,10 +43,9 @@ public class Deque<Item> implements Iterable<Item> {
     public void addLast(Item item){
         if(item==null) throw new IllegalArgumentException();
             Node oldLast=Last;
-            System.out.println(item+"sseafd");
             Last=new Node();
             Last.data=item;
-            Last.next=oldLast;
+            oldLast.next=Last;
             n=n+1;
 
     }
